@@ -26,25 +26,25 @@
         font-weight: bold;
       }
       
-      .side-header__box {
+      &__box {
         display: flex;
         justify-content: space-between;
         width: 100%;
         font-weight: bold;
         
-        .side-header__box__user-name {}
+        &__user-name {}
         
-        .side-header__box__menu {
+        &__menu {
           display: flex;
           
-          .side-header__box__menu__new-group {
+          &__new-group {
             margin-left: 0.3rem;
             a {
               color: white;
             }
           }
           
-          .side-header__box__menu__edit-user {
+          &__edit-user {
             margin-left: 0.3rem;
             a {
               color: white;
@@ -67,11 +67,11 @@
         .group {
           margin-bottom: 40px;
           
-          .group__group-name {
+          &__group-name {
             font-size: 15px;
             margin-bottom: 5px;
           }
-          .group__latest-message {}
+          &__latest-message {}
         }
       }
     }
@@ -89,21 +89,21 @@
       border-bottom: solid 1px #eee;
       overflow: scroll;
       
-      .main-header__left-box {
+      &__left-box {
         margin-top: 35px;
         
-        .main-header__left-box__current-group {
+        &__current-group {
           font-size: 20px;
           color: #333;
           margin-bottom: 15px;
         }
 
-        .main-header__left-box__member-list {
+        &__member-list {
           display: flex;
           font-size: 12px;
           color: #999999;
 
-          .main-header__left-box__member-list__member {}
+          &__member {}
         }
       }
         
@@ -133,24 +133,24 @@
       .message {
         padding-bottom: 40px;
 
-        .message__upper-info {
+        &__upper-info {
           display: flex;
           margin-bottom: 10px;
 
-          .message__upper-info__talker {
+          &__talker {
             color: #434a54;
             font-size: 16px;
             font-weight: bold;
           }
 
-          .message__upper-info__date {
+          &__date {
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
           }
         }
 
-        .message__text {
+        &__text {
           color: #434a54;
           font-size: 14px;
           margin-bottom: 10px;
@@ -184,7 +184,7 @@
 
           input {
             height: 50px;
-            width: 92%;
+            width: 95%;
             padding: 0 40px 0 10px;
             color: #434a54;
             border-style: none;
