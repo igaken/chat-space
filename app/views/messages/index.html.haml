@@ -1,61 +1,51 @@
-!!!
-%html
-  %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
-    %title ChatSpace
-    %meta{content: "authenticity_token", name: "csrf-param"}/
-    %meta{content: "lxRLrDJE0YNqpOSuCmKle5on7BtBprhygA3mhXguweXiHPRitZsJnaUxaiOhVtOOYGr+m/PO/DIrn7ZbJhoJ7Q==", name: "csrf-token"}/
-    %link{"data-turbolinks-track" => "reload", href: "/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css", media: "all", rel: "stylesheet"}/
-    %script{"data-turbolinks-track" => "reload", src: "/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js"}
-  %body
-    .flash-box
-    .wrapper
-      .chat-side
-        .side-header
-          .side-header__box
-            .side-header__box__user-name igaken
-            .side-header__box__menu
-              .side-header__box__menu__new-group
-                %a{href: "/groups/new"}
-                  %i.fa.fa-edit
-              .side-header__box__menu__edit-user
-                %a{href: "/users/1332/edit"} 
-                  %i.fa.fa-cog
-        .groups
-          %a{href: "/groups/3108/messages"}  
-            .group
-              .group__group-name Give&amp;Give会
-              .group__latest-message coding
-          %a{href: "/groups/2891/messages"}
-            .group
-              .group__group-name ＼(^o^)／
-              .group__latest-message aaaa
-      .chat-main
-        .main-header
-          .main-header__left-box
-            .main-header__left-box__current-group{"data-group_id" => "3108"}
-              Give&amp;Give会
-            .main-header__left-box__member-list
-              Member：
-              .main-header__left-box__member-list__member igaken
-          %a{href: "/groups/3108/edit"}
-            .main-header__edit-btn Edit
-        .messages
-          .message{"data-message_id" => "8336"}
-            .message__upper-info
-              .message__upper-info__talker igaken
-              .message__upper-info__date 2019/08/10(Sat) 17:41:33
-            .message__text coding
-        .form
-          %form#new_message.new_message{"accept-charset" => "UTF-8", action: "/groups/3108/messages", enctype: "multipart/form-data", method: "post"}
-            %input{name: "utf8", type: "hidden", value: "✓"}/
-            %input{name: "authenticity_token", type: "hidden", value: "1wUYVj8SItnEz0NLawjK4I4u3QANevQZu2+O5wGVtliDIikFtcjbiI03rbKdJugdWCat2rli/bpGseVXZpockQ=="}/
-            .input-box
-              %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-              %label.input-box__image{for: "message_image"}
-                %i.fa.fa-image
-                %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
-            %input.submit-btn{"data-disable-with" => "Send", name: "commit", type:"submit", value:"Send"}/
+.flash-box
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        .side-header__box__user-name igaken
+        .side-header__box__menu
+          .side-header__box__menu__new-group
+            = link_to "/groups/new" do
+              = fa_icon "pencil-square-o"
+          .side-header__box__menu__edit-user
+            = link_to "/users/1332/edit" do
+              = fa_icon "cog"
+    .groups
+      = link_to "/groups/3108/messages" do
+        .group
+          .group__group-name Give&amp;Give会
+          .group__latest-message coding
+      = link_to "/groups/2891/messages" do
+        .group
+          .group__group-name ＼(^o^)／
+          .group__latest-message aaaa
+  .chat-main
+    .main-header
+      .main-header__left-box
+        .main-header__left-box__current-group{"data-group_id" => "3108"}
+          Give&amp;Give会
+        .main-header__left-box__member-list
+          Member：
+          .main-header__left-box__member-list__member igaken
+      = link_to "/groups/3108/edit" do
+        .main-header__edit-btn Edit
+    .messages
+      .message{"data-message_id" => "8336"}
+        .message__upper-info
+          .message__upper-info__talker igaken
+          .message__upper-info__date 2019/08/10(Sat) 17:41:33
+        .message__text coding
+    .form
+      %form#new_message.new_message{"accept-charset" => "UTF-8", action: "/groups/3108/messages", enctype: "multipart/form-data", method: "post"}
+        %input{name: "utf8", type: "hidden", value: "✓"}/
+        %input{name: "authenticity_token", type: "hidden", value: "1wUYVj8SItnEz0NLawjK4I4u3QANevQZu2+O5wGVtliDIikFtcjbiI03rbKdJugdWCat2rli/bpGseVXZpockQ=="}/
+        .input-box
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"}
+            %i.fa.fa-image
+            %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
+        %input.submit-btn{"data-disable-with" => "Send", name: "commit", type:"submit", value:"Send"}/
 
 
 
