@@ -39,6 +39,8 @@ $(function(){
     })
     .fail(function(){
       alert('error');
+      $form.reset();
+      return false;
     })
     $( ".form__submit").prop( "disabled", false );
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
