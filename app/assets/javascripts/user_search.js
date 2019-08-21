@@ -11,7 +11,7 @@ $(function() {
   };
 
   function appendNoUser(user) {
-    var html = ``
+    var html = user
     search_list.append(html);
   };
 
