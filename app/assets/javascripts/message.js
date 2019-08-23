@@ -33,11 +33,10 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html)
       $("form")[0].reset();
-      $('.form__submit').attr('disabled', false);
+      // $('.form__submit').attr('disabled', false);
     })
     .fail(function(){
       alert('error');
-      return false;
     })
     $( ".form__submit").prop( "disabled", false );
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
@@ -66,5 +65,5 @@ $(function(){
       });
     }
   };
-  setInterval(reloadMessages, 10000);
+  setInterval(reloadMessages, 5000);
 });
