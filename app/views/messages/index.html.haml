@@ -16,7 +16,8 @@
               .main-header__edit-btn Edit
 
     .messages
-      = render @messages  
+      = render partial: 'message' 
+      
 
     .form
       = form_for [@group, @message] do |f|
