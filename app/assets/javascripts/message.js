@@ -35,7 +35,7 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html)
       $("form")[0].reset();
-      // $('.form__submit').attr('disabled', false);
+      $('.form__submit').attr('disabled', false);
     })
     .fail(function(){
       alert('error');
