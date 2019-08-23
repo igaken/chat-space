@@ -40,7 +40,7 @@ $(function(){
     .fail(function(){
       alert('error');
     })
-    $( ".form__submit").prop( "disabled", false );
+    $('.form__submit').prop( "disabled", false );
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
   })
   // 自動更新の記述
