@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var imagehtml = (message.image == null) ? "" : `<img src="${message.image}" class= "lower-message__image">`
+    var imagehtml = (message.image == null) ? `` : `<img src="${message.image}" class= "lower-message__image">`
     var html = `<div class="message" data-message-id="${message.id}"}
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -54,9 +54,9 @@ $(function(){
         dataType: 'json', 
         data: {last_id: last_message_id} 
       })
-      .done(function (messages) { 
+      .done(function (data) { 
         var insertHTML = '';
-        messages.forEach(function (message) {
+        data.forEach(function (message) {
           insertHTML = buildHTML(message); 
           $('.messages').append(insertHTML);
         })
